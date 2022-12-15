@@ -28,7 +28,7 @@ export class EquipesService {
     const equipesUrl = 'http://localhost:51723/api/Equipe/'+equipeId;
     return this.httpClient.get<Equipe>(equipesUrl); // retourne un observable
   }
-
+/*
   creerEquipe(){
 
   }
@@ -39,5 +39,5 @@ export class EquipesService {
 
   modifierEquipe(){
 
-  }
+  }*/
 }
