@@ -1,0 +1,24 @@
+<div class="row gx-4 gx-lg-5">
+    <div class="col-md-4 mb-5" *ngFor="let compte of compteList |async">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title" >{{ compte.nom }}</h2>
+                <p class="card-text"> Avatar : {{ compte.avatar }}</p>
+                <p class="card-text"> Courriel : {{ compte.courriel }}</p>
+                <p class="card-text"> Capitaine ? : {{ compte.devenirCapitaine }}</p>
+                <p class="card-text"> Numero de Compte : {{ compte.idCompte }}</p>
+                <p class="card-text"> Numero d'équipe : {{ compte.idEquipe }}</p>
+                <p class="card-text"> Nom : {{ compte.nom }}</p>
+                <p class="card-text"> Prenom : {{ compte.point }}</p>
+                <p class="card-text"> Points : {{ compte.EquipePoints }}</p>
+                <p class="card-text"> Programme : {{ compte.prenom }}</p>
+                <p class="card-text"> Pseudo : {{ compte.programme }}</p>
+                <p class="card-text"> Role : {{ compte.pseudo }}</p>
+                <p class="card-text"> Points : {{ compte.role }}</p>
+            </div>
+            <div class="card-footer"><a class="btn btn-primary btn-sm">Modifier</a></div>
+            <div class="card-footer"><a class="btn btn-primary btn-sm">Supprimer</a></div>
+        </div>
+    </div>
+    
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Equipe } from '../equipe';
 import { EquipesService } from '../equipes.service';
 
@@ -10,13 +11,16 @@ import { EquipesService } from '../equipes.service';
 
 export class VoirEquipesComponent implements OnInit {
 
-  
-  equipeList:any;
+  equipesTyped:Equipe;
+  equipeList: any;
 
   constructor(private equipeService: EquipesService){
 
   }
   ngOnInit(): void {
+    /*this.equipeService.voirEquipes().subscribe(data => {
+      this.equipesTyped = data;
+    });*/
     this.equipeList = this.equipeService.voirEquipes();
   }
 /*

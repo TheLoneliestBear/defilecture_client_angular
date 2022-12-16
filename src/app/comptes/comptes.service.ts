@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Equipe } from './equipe';
 import { Observable } from 'rxjs';
+import { Compte } from './compte';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EquipesService {
-
+export class ComptesService {
 
   constructor(private httpClient: HttpClient) { }
-/*
+  /*
   voirEquipes(): Observable<Equipe>{
     const equipesUrl = 'http://localhost:51723/api/Equipes';
 
@@ -18,16 +17,11 @@ export class EquipesService {
 
   }*/
 
-  voirEquipes(){
-    const equipesUrl = 'http://localhost:51723/api/Equipes';
+  voirComptes(){
+    const equipesUrl = 'http://localhost:51723/api/Comptes';
     
     return this.httpClient.get(equipesUrl); 
 
-  }
-
-  voirEquipesById(equipeId:any)/* Observable<Equipe>*/{
-    const equipesUrl = 'http://localhost:51723/api/Equipe/'+equipeId;
-    return this.httpClient.get(equipesUrl); // retourne un observable
   }
 /*
   creerEquipe(){
